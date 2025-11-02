@@ -1,7 +1,8 @@
 # Document Handling - Computer Vision Project
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green)](https://opencv.org/)
+[![Python](https://img.shields.io/badge/Python-3.13%2B-blue)](https://www.python.org/)
+[![OpenCV](https://img.shields.io/badge/OpenCV-4.12.0-green)](https://opencv.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-2.2.6-blue)](https://numpy.org/)
 
 Проект для обработки и анализа документов с использованием компьютерного зрения. Включает функции для обнаружения документа на изображении, перспективной трансформации и анализа текстового содержимого.
 
@@ -11,22 +12,22 @@
 - Анализ текста: Подсчет количества строк и символов в документе
 
 ## 🏗️ Структура проекта
-text
+
 Document handling/
 - core/
-  - init__.py
+  - init.py
   - document_transformation.py
-  - text_analyzer.py
-- utils/
-  - init__.py
-  - file_handler.py
-- models/
-  - init__.py
-  - document.py
-- shared/
-  - init__.py
-  - constants.py
-  - load_library.py
+  - text_analyzer.py           
+- utils/                       
+  - init.py
+  - file_handler.py            
+- models/                      
+  - init.py
+  - document.py                
+- shared/                      
+  - init.py
+  - constants.py               
+  - load_library.py            
 - data/
   - IMG_3024.jpeg
 - results/
@@ -34,7 +35,6 @@ Document handling/
 ## 🚀 Быстрый старт
 Установка зависимостей
 ```
-bash
 pip install opencv-python numpy
 ```
 
