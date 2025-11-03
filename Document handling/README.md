@@ -249,7 +249,7 @@ ____
 | 1. Загрузка исходного изображения | 2. Обнаруженние углов |
 | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/data/IMG_3024.jpeg" alt="Исходное изображение"> | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/results/Image%20corners.png" alt="Изображение с выделенными угловыми точками"> |
 | 3. Выравнивание документа | 4. Анализ текста |
-| <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/results/img_doc_23.27.05.png" alt="Выровненный документ"> | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/data/IMG.jpeg"> |
+| <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/results/02.11.2025/img_doc_17.55.40.png" alt="Выровненный документ"> | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/results/02.11.2025/img_doc_17.55.40copy.png" alt="Документ с выделиными строками и символами"> |
 ____
 ## 🔧 Настройка
 Параметры обработки можно настроить в [shared.constants.py](https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/shared/constants.py):
