@@ -60,13 +60,15 @@ img_path = FileHandler.select_file_path()
 # Обнаружение и трансформация документа
 transform = DocumentTransformation()
 result = transform.process_document(img_path)
-
 # Сохранение документа
 FileHandler.save_image(image=result.get_transformed_img())
 
 # Анализ текста
 analyzer = TextAnalyzer()
-analyzer .process_document(result)
+result = analyzer.process_document(result)
+# Сохранение документа
+FileHandler.save_image(image=result.get_selected_text_img(), copy=True)
+FileHandler.save_info_text(result)
 ```
 
 ### 📁 Выбор файлов
@@ -194,14 +196,15 @@ from utils.file_handler import FileHandler
 # Сохранение обработанного изображения
 success = FileHandler.save_image(processed_image)
 ```
-Описание функции `save_image` из [utils.file_handler.py](https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/utils/__init__.py)
+Описание функции `save_image` и `save_info_text` из [utils.file_handler.py](https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/utils/__init__.py)
 ```
-def save_image(image):
+def save_image(image, copy=False):
   """
   Автоматически сохраняет изображение в папку с временной меткой
 
   Входные значения (Inputs):
     image (numpy.ndarray): Массив изображения для сохранения
+    copy  (bool): Переменая для создания копии (используется для сохранения изображения с выделенными строками и символами)
         
   Выходные значения (Outputs):
     
@@ -214,6 +217,27 @@ def save_image(image):
     НЕУСПЕШНОЕ ВЫПОЛНЕНИЕ:
       - Возвращает: bool (False при ошибке сохранения)
       - Может вызвать исключение при проблемах с файловой системой
+  """
+```
+```
+def save_info_text(document):
+  """
+  Метод для сохранения информации о количестве строк и символах
+
+  Входные значения (Inputs):
+    document (Object Document): Класс документа
+
+    Выходные значения (Outputs):
+    
+    УСПЕШНОЕ ВЫПОЛНЕНИЕ:
+      - Возвращает: bool (True при успешном сохранении)
+      - Создает структуру папок: results/ГГГГ-ММ-ДД/
+      - Генерирует имя файла: info_doc_ЧЧ.ММ.СС.txt
+    
+    НЕУСПЕШНОЕ ВЫПОЛНЕНИЕ:
+      - Возвращает: bool (False при ошибке сохранения)
+      - Может вызвать исключение при проблемах с файловой системой
+
   """
 ```
 Особенности реализации:
@@ -250,6 +274,7 @@ ____
 | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/data/IMG_3024.jpeg" alt="Исходное изображение"> | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/results/Image%20corners.png" alt="Изображение с выделенными угловыми точками"> |
 | 3. Выравнивание документа | 4. Анализ текста |
 | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/results/02.11.2025/img_doc_17.55.40.png" alt="Выровненный документ"> | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/results/02.11.2025/img_doc_17.55.40copy.png" alt="Документ с выделиными строками и символами"> |
+
 ____
 ## 🔧 Настройка
 Параметры обработки можно настроить в [shared.constants.py](https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/shared/constants.py):
