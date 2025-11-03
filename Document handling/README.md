@@ -247,13 +247,17 @@ ____
 |<dir>|<dir>|
 |---|---|
 | 1. Загрузка исходного изображения | 2. Обнаруженние углов |
-| <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/data/IMG_3024.jpeg" alt="Исходное изображение"> | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/data/Image cornrrs.jpeg" alt="Изображение с выделенными угловыми точками"> |
+| <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/data/IMG_3024.jpeg" alt="Исходное изображение"> | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/data/Image corners.jpeg" alt="Изображение с выделенными угловыми точками"> |
 | 3. Выравнивание документа | 4. Анализ текста |
 | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/results/img_doc_23.27.05.png" alt="Выровненный документ"> | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/data/IMG.jpeg"> |
 ____
 ## 🔧 Настройка
 Параметры обработки можно настроить в [shared.constants.py](https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/shared/constants.py):
 
+###  Максимальный размер изображения для обработки (необходим для оптимизации при работе с изображениями в высоком разрешении)
+```
+MAX_DIMENSION = 1000
+```
 ### Поддерживаемые форматы:
 ```
 FORMAT_IMAGE_FILE = "*.jpg *.jpeg *.png *.bmp"
