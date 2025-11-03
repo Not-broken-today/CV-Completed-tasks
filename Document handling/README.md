@@ -247,7 +247,7 @@ ____
 |<dir>|<dir>|
 |---|---|
 | 1. Загрузка исходного изображения | 2. Обнаруженние углов |
-| <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/data/IMG_3024.jpeg" alt="Исходное изображение"> | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/data/IMG.jpeg" alt="Изображение с выделенными угловыми точками"> |
+| <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/data/IMG_3024.jpeg" alt="Исходное изображение"> | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/data/Image cornrrs.jpeg" alt="Изображение с выделенными угловыми точками"> |
 | 3. Выравнивание документа | 4. Анализ текста |
 | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/results/img_doc_23.27.05.png" alt="Выровненный документ"> | <img src="https://github.com/Not-broken-today/CV-Completed-tasks/blob/main/Document%20handling/data/IMG.jpeg"> |
 ____
